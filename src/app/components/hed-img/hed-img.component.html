@@ -1,0 +1,108 @@
+<section id="hero">
+    <div class="hero-container ">
+        <div class="wow fadeIn">
+            <div class="hero-logo ">
+
+                <div class="carousel">
+
+                    <carousel [interval]="myInterval" [noWrap]="noWrapSlides"
+                              [(activeSlide)]="activeSlideIndex">
+
+                        <slide *ngFor="let slide of slides; let ind=index">
+                            <img [src]="slide.image">
+                            <div class="carousel-caption">
+                                <div class="actions">
+
+                                    <form >
+                                        <input type="text" name="search" placeholder="Search place..."><i class="_585_"></i>
+                                    </form>
+
+                                        <button type="button" class="btn btn-outline-warning" data-toggle="modal" data-target="#myModal">Filtr</button>
+                                </div>
+                                <h4>Slide {{ind + 1}}</h4>
+                                <h2>{{ slide.text }}</h2>
+
+                            </div>
+
+                        </slide>
+
+                    </carousel>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<div class="container">
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1>FILTR</h1>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                </div>
+                <div class="modal-body">
+
+
+                    <div class="form-row align-items-center">
+                        <div class="col-auto my-1">
+                            <label class="mr-sm-2" for="inlineFormCustomSelect">MARZ</label>
+                            <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                                <option selected>marz...</option>
+                                <option value="1"> Shirak</option>
+                                <option value="2">Lori</option>
+                                <option value="3">Syunik</option>
+                                <option value="3">Tavowš</option>
+                                <option value="3">Kotayk</option>
+                                <option value="3">Gegharkunik</option>
+                                <option value="3">Armavir</option>
+                                <option value="3">Ararat</option>
+                                <option value="3">Aragatsotn</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row align-items-center">
+                        <div class="col-auto my-1">
+                            <label class="mr-sm-2" for="inlineFormCustomSelect">TARADZASHTJAN</label>
+                            <select class="custom-select mr-sm-2">
+                                <option selected>taradzashrjan...</option>
+                                <option value="1"> ashocq</option>
+                                <option value="2">talin</option>
+                                <option value="3">Syunik</option>
+
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row align-items-center">
+                        <div class="col-auto my-1">
+                            <label class="mr-sm-2" for="inlineFormCustomSelect">BNAKAVAYR</label>
+                            <select class="custom-select mr-sm-2">
+                                <option selected>taradzashrjan...</option>
+                                <option value="1"> ashocq</option>
+                                <option value="2">talin</option>
+
+                            </select>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
